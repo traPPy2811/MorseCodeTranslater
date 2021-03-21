@@ -1,0 +1,94 @@
+/* f7444e
+    f7f8f3
+    78BCC4
+    002C3E*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #dbdbdb;
+  font-family: "Yusei Magic", sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+.container {
+  flex: 1;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: -4px 3px 8px 6px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: -4px 3px 8px 6px rgba(0, 0, 0, 1);
+  -moz-box-shadow: -4px 3px 8px 6px rgba(0, 0, 0, 1);
+  background: #fff;
+}
+.main-head {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 20vh;
+}
+.title {
+  color: #f7444e;
+  font-size: 2rem;
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.input-title,
+.output-title {
+  color: #002c3e;
+  font-size: large;
+  margin: 1rem 0;
+}
+#morse-in,
+#morse-out {
+  min-height: 100px;
+  /* background: transparent; */
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+textarea:focus::placeholder {
+  opacity: 0.5;
+}
+#morse-out:focus {
+  outline: none;
+}
+.cover {
+  display: flex;
+  position: absolute;
+  max-width: 100vw;
+  max-height: 95vh;
+  z-index: -5;
+}
+.cover img {
+  height: 100%;
+  min-height: 25vh;
+  transform: scaleY(-1);
+}
+#morse-out {
+  letter-spacing: 3px;
+}
+.highlight {
+  color: #9c493d;
+}
+.ff-canvas {
+  max-height: 95vh;
+  max-width: 100vw;
+  height: 100%;
+  min-height: 25vh;
+  transform: scaleY(-1);
+}

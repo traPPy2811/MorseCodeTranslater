@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse-Code-Translation</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="main-head">
+                    <h1><span class="title">Morse-Code-Translation</span></h1>
+        </header>
+        <section class="main-section">
+           <label for="morse-in" class="input-title">Input</label>
+            <textarea cols="40" id="morse-in" name="morse-input" placeholder="Type your message here [Normal text or Morse Code using '.' , '-' and separate Characters by space and words by double space.]"></textarea>
+            <span class="highlight"></span>
+            <label for="morse-out" class="output-title">Output</label>
+            <textarea readonly cols="40" id="morse-out" name="morse-output" placeholder="Characters are separated by single space and words are separted by double space."></textarea>
+        </section>
+    </div>
+    <div class="cover">
+        <img src="./a.gif" class="foo">
+    </div>
+    <script src="./freezeframe.min.js"></script>
+    <script>
+    const ff= new Freezeframe({
+    selector: '.foo',
+    trigger: false,
+    overlay: false,
+    responsive: false,
+    warnings: false
+    });
+    const fn=document.querySelector("#morse-in");
+    fn.addEventListener('focus',(e)=>(ff.start()));
+    fn.addEventListener('blur',(e)=>(ff.stop()));
+    </script>
+</body>
+</html>
